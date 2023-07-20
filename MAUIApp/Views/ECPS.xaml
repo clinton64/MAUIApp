@@ -3,24 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MAUIApp.Views.ECPS"
              Title="Rajuk FRCM">
-    <VerticalStackLayout Spacing="5">
+    <FlexLayout Direction="Column">
         <Label 
             Text="Rajdhani Unnayan Kartipakkha (RAJUK) FRCM"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Button
-            x:Name="LogInBtn"
-            Text="Log In"
-            WidthRequest="250"
-            Clicked="LogInBtnClicked"
             HorizontalOptions="Center"
+            FontSize="24"
+            FontAttributes="Bold"
+            Margin="0,20,0,0"
             />
-        <Button
-            x:Name="RegisterBtn"
-            Text="Register"
-            WidthRequest="250"
-            Clicked="RegisterBtnClicked"
-            HorizontalOptions="Center"
-            />
-    </VerticalStackLayout>
+
+        <FlexLayout Direction="Column" JustifyContent="Center" AlignItems="Center" FlexLayout.Grow="1">
+            <VerticalStackLayout Spacing="5">
+                <Button
+                    x:Name="LogInBtn"
+                    Text="Log In"
+                    WidthRequest="250"
+                    Clicked="LogInBtnClicked"
+                    HorizontalOptions="Center"
+                    />
+                <Button
+                    x:Name="RegisterBtn"
+                    Text="Register"
+                    WidthRequest="250"
+                    Clicked="RegisterBtnClicked"
+                    HorizontalOptions="Center"
+                    />
+            </VerticalStackLayout>
+        </FlexLayout>
+    </FlexLayout>
 </ContentPage>
